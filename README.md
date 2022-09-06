@@ -9,7 +9,6 @@ Have Django provide a JWT token to the React client in order to make athenticate
 ## Prerequisites
 
 - tunr
-- tunr heroku deploy
 - simple react app
 
 ## Objectives
@@ -22,7 +21,7 @@ By the end of this, developers should be able to:
 
 ## Introduction
 
-We are going to use our tunr django app that we got working with [django-rest-framework](https://git.generalassemb.ly/seir-1018/django-rest-framework).
+We are going to use our tunr django app that we built up in our previous lessons.
 
 ## Checklist:
 
@@ -210,8 +209,7 @@ Write the artist fetch logic to confirm your client can talk to your backend ser
 
 ```jsx
   useEffect(() => {
-    fetch(process.env.REACT_APP_API_URL + 'artists/')
-      .then(res => res.json())
+    const res = axios.get(process.env.REACT_APP_API_URL + 'artists/')
       .then(res => {
         console.log('The app is responding fine', res);
       });
