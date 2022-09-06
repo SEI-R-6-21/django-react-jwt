@@ -210,9 +210,7 @@ Write the artist fetch logic to confirm your client can talk to your backend ser
 ```jsx
   useEffect(() => {
     const res = axios.get(process.env.REACT_APP_API_URL + 'artists/')
-      .then(res => {
         console.log('The app is responding fine', res);
-      });
   }, []);
 ```
 
@@ -227,7 +225,7 @@ Let's create a component with a controlled form that we'll use to submit the use
 - Add a state object inside your component
 - Create an HTML form with a text input and a password input field
 - Write the handleChange logic
-- Write the onSubmit `fetch` logic
+- Write the onSubmit `Axios.Get` logic
 - Wire the handleChange and onSubmit to your form and its inputs
 - Make sure to have an options object to pass as a second arguments to your fetch, in order to add the `Content-Type` header
 - Append the `body` 
